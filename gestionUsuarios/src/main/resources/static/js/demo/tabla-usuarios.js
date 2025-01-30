@@ -5,7 +5,6 @@ $(document).ready(function() {
   $('#usuarios').DataTable();
 });
 
-
  async function cargarUsuarios(){
 
   const request = await fetch('/usuarios', {
@@ -16,8 +15,6 @@ $(document).ready(function() {
     }
   });
   const usuarios = await request.json();
-
-  console.log(usuarios);
 
 let listaHtml = '';
 for(let usuario of usuarios){
